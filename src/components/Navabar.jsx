@@ -63,9 +63,13 @@ const Navabar = () => {
       <div className="navbar-end gap-5">
         <div className="flex items-center">
           <LuUsers className="mr-2 text-xl "></LuUsers>
-          <Link to="/login">Login</Link>
+          <Link className="hover:underline hover:text-red-500" to="/login">
+            Login
+          </Link>
           <span>/</span>
-          <Link to="/register">Register</Link>
+          <Link className="hover:underline hover:text-red-500" to="/register">
+            Register
+          </Link>
         </div>
         <button className="bg-[#FA4A4A] border-none px-5 py-3 rounded-md custom-hover flex items-center gap-4">
           <span className="text-white">Add Listing</span>
