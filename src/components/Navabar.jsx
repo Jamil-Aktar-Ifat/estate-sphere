@@ -1,10 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
+import { IoHomeOutline } from "react-icons/io5";
+import { CiCirclePlus } from "react-icons/ci";
+import { LuUsers } from "react-icons/lu";
 
 const Navabar = () => {
   const navLinks = (
     <>
-      <li >
-        <NavLink to="/">Home</NavLink>
+      <li>
+        <NavLink to="/" className="flex items-center gap-1">
+          <IoHomeOutline className="font-bold text-lg"></IoHomeOutline>
+          Home
+        </NavLink>
       </li>
       <li>
         <NavLink>Properties</NavLink>
@@ -13,15 +19,15 @@ const Navabar = () => {
         <NavLink>Realtor</NavLink>
       </li>
       <li>
-        <NavLink>Others</NavLink>
+        <NavLink>News</NavLink>
       </li>
       <li>
-        <NavLink>Update Profile</NavLink>
+        <NavLink>Blogs</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-[#004274] text-white md:px-44 py-4">
+    <div className="navbar md:px-44 py-4 border mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,9 +60,16 @@ const Navabar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="gap-6 menu-horizontal px-1">{navLinks}</ul>
       </div>
-      <div className="navbar-end">
-        <button className="bg-[#00aeff] border-none px-5 py-2 custom-hover ">
-          Login
+      <div className="navbar-end gap-5">
+        <div className="flex items-center">
+          <LuUsers className="mr-2 text-xl "></LuUsers>
+          <Link to="/login">Login</Link>
+          <span>/</span>
+          <Link to="/register">Register</Link>
+        </div>
+        <button className="bg-[#FA4A4A] border-none px-5 py-3 rounded-md custom-hover flex items-center gap-4">
+          <span className="text-white">Add Listing</span>
+          <CiCirclePlus className="text-xl text-white font-extrabold"></CiCirclePlus>
         </button>
       </div>
     </div>

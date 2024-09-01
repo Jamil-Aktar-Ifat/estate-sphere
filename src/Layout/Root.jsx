@@ -3,7 +3,7 @@ import Navabar from "../components/Navabar";
 
 const Root = () => {
   return (
-    <div className="w-full">
+    <div className="mx-auto">
       <div className="">
         <Navabar></Navabar>
       </div>

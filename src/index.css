@@ -9,7 +9,7 @@ body {
 }
 
 .custom-hover:hover{
-    background: rgb(162, 200, 223);
-    color: black;
+    background: black;
+    color: whitesmoke;
     /* text-decoration: underline; */
 }
