@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../Providers/AuthProvider";
+import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 const Register = () => {
+  DynamicTitle("Registration");
   const { createUser } = useContext(AuthContext);
   const [registationError, setRegistrationError] = useState("");
 

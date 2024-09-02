@@ -4,11 +4,13 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../Providers/AuthProvider";
+import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 const Login = () => {
+  DynamicTitle('Login')
   const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
 

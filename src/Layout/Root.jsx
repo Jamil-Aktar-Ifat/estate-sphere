@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Navabar from "../components/Navabar";
+import Navabar from "../components/Navbar/Navabar";
 
 const Root = () => {
   return (
