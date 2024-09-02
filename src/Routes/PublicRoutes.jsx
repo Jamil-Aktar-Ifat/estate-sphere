@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import NotFound from "../Pages/NotFound/NotFound";
+import UserProfile from "../Pages/UserProfile/UserProfile";
+import PrivateRoutes from "./PrivateRoutes";
 
 const routes = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const routes = createBrowserRouter([
       {
         path: "*",
         element: <NotFound></NotFound>,
+      },
+      {
+        path: "/userProfile",
+        element: (
+          <PrivateRoutes>
+            <UserProfile></UserProfile>
+          </PrivateRoutes>
+        ),
       },
     ],
   },

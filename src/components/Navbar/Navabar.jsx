@@ -34,11 +34,15 @@ const Navabar = () => {
         <NavLink>Realtor</NavLink>
       </li>
       <li>
-        <NavLink>News</NavLink>
-      </li>
-      <li>
         <NavLink>Blogs</NavLink>
       </li>
+      {user ? (
+        <li>
+          <NavLink to="/userProfile">User Profile</NavLink>
+        </li>
+      ) : (
+        ""
+      )}
     </>
   );
   return (
@@ -80,10 +84,11 @@ const Navabar = () => {
           {user ? (
             <div className="flex gap-2 ">
               <div className="">
-                <div className="rounded-full tooltip" data-tip={user.displayName}>
-                  <img className="w-10"
-                    src={user.photoURL}
-                  />
+                <div
+                  className="rounded-full tooltip"
+                  data-tip={user.displayName}
+                >
+                  <img className="w-10" src={user.photoURL} />
                 </div>
               </div>
               <div className="hover:text-red-400 hover:underline flex items-center gap-2">

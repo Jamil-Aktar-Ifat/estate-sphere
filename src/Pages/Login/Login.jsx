@@ -3,16 +3,18 @@ import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 const Login = () => {
-  DynamicTitle('Login')
+  DynamicTitle("Login");
   const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   //login btn
   const handleLogIn = (e) => {
@@ -26,6 +28,9 @@ const Login = () => {
       .then((result) => {
         toast.success("Sucessfully logged in");
         console.log(result);
+
+        // navigate after login
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
