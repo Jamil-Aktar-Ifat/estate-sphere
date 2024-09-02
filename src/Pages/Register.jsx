@@ -16,17 +16,17 @@ const Register = () => {
       </h2>
       <div className="border mx-72 mt-20">
         <h2 className="text-xl font-semibold my-8 text-center">
-          Login Here Today!!
+          Register Here Today!!
         </h2>
 
         <div className="md:mx-20">
           <div className="">
             <h2 className="font-medium mb-1">Your Name</h2>
             <input
-              className="border p-4 w-full mb-5 rounded-md"
+              className="border p-4 w-full mb-5 rounded-md "
               type="name"
               name="name"
-              id="Name"
+              id="name"
               placeholder="Enter your name"
             />
           </div>
@@ -51,6 +51,10 @@ const Register = () => {
               placeholder="Enter your password"
             />
           </div>
+        </div>
+        <div className="flex gap-2 mx-20 my-2">
+          <input type="checkbox" name="" id="" />
+          <p>I Agree to All Terms & conditions</p>
         </div>
         <div className="text-center p-3">
           <button className="bg-[#FA4A4A] text-white border-none px-5 py-3 rounded-md w-3/4 mb-3">

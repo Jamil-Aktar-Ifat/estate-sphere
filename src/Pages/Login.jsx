@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -36,9 +38,6 @@ const Login = () => {
           <div className="relative">
             <div className="flex justify-between">
               <h2 className="font-medium mb-1">Your Password</h2>
-              <a href="" className="text-red-400 font-medium ">
-                Forgot Password?
-              </a>
             </div>
             <input
               className="border p-4 w-full mb-4 rounded-md"
@@ -57,12 +56,34 @@ const Login = () => {
                 <FaRegEyeSlash></FaRegEyeSlash>
               )}
             </span>
+            <div className="flex justify-between">
+              <div className="flex gap-2">
+                <input type="checkbox" name="" id="" />
+                <p>Remember me</p>
+              </div>
+              <div>
+                <a className="text-red-500" href="">
+                  Forgot password?
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="text-center p-3">
           <button className="bg-[#FA4A4A] text-white border-none px-5 py-3 rounded-md w-3/4 mb-5">
             Login
           </button>
+          <div className="flex gap-3 justify-center">
+            <button className="flex items-center gap-4 bg-blue-400 text-white px-4 rounded-md w-3/5 ">
+              <span className=" bg-white p-3 my-2 rounded-md text-xl">
+                <FcGoogle></FcGoogle>
+              </span>
+              Sign in with Google
+            </button>
+            <button className="bg-slate-300 p-4 px-5 rounded-md text-2xl ">
+              <FaGithub></FaGithub>
+            </button>
+          </div>
         </div>
         <p className="text-center mb-10">
           Not a member?{" "}
