@@ -1,9 +1,24 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoHomeOutline } from "react-icons/io5";
 import { CiCirclePlus } from "react-icons/ci";
+import { GoSignOut } from "react-icons/go";
 import { LuUsers } from "react-icons/lu";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navabar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const navLinks = (
     <>
       <li>
@@ -27,7 +42,7 @@ const Navabar = () => {
     </>
   );
   return (
-    <div className="navbar md:px-44 py-4 border mx-auto">
+    <div className="navbar md:px-44 py-4 border mx-auto my-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,14 +77,37 @@ const Navabar = () => {
       </div>
       <div className="navbar-end gap-5">
         <div className="flex items-center">
-          <LuUsers className="mr-2 text-xl "></LuUsers>
-          <Link className="hover:underline hover:text-red-500" to="/login">
-            Login
-          </Link>
-          <span>/</span>
-          <Link className="hover:underline hover:text-red-500" to="/register">
-            Register
-          </Link>
+          {user ? (
+            <div className="flex gap-2 ">
+              <div className="">
+                <div className="rounded-full tooltip" data-tip={user.displayName}>
+                  <img className="w-10"
+                    src={user.photoURL}
+                  />
+                </div>
+              </div>
+              <div className="hover:text-red-400 hover:underline flex items-center gap-2">
+                <button onClick={handleLogout}>Sign Out</button>
+                <div className="text-lg">
+                  <GoSignOut></GoSignOut>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="flex items-center">
+              <LuUsers className="mr-2 text-xl "></LuUsers>
+              <Link className="hover:underline hover:text-red-500" to="/login">
+                Login
+              </Link>
+              <span>/</span>
+              <Link
+                className="hover:underline hover:text-red-500"
+                to="/register"
+              >
+                Register
+              </Link>
+            </div>
+          )}
         </div>
         <button className="bg-[#FA4A4A] border-none px-5 py-3 rounded-md custom-hover flex items-center gap-4">
           <span className="text-white">Add Listing</span>
