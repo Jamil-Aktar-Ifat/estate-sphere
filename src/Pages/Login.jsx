@@ -5,6 +5,8 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
@@ -20,11 +22,12 @@ const Login = () => {
     //sign in
     signIn(email, password)
       .then((result) => {
-        console.log("User logged in successfully");
+        toast.success("Sucessfully logged in");
         console.log(result);
       })
       .catch((error) => {
         console.log(error);
+        toast.error("Invalid Login Credential");
       });
   };
 
@@ -35,6 +38,7 @@ const Login = () => {
         console.log(result);
       })
       .catch((error) => {
+        toast.error("Invalid Login Credential");
         console.log(error);
       });
   };
@@ -46,6 +50,7 @@ const Login = () => {
         console.log(result);
       })
       .catch((error) => {
+        toast.error("Invalid Login Credential");
         console.log(error);
       });
   };
@@ -136,6 +141,19 @@ const Login = () => {
           </Link>{" "}
           now
         </p>
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Bounce}
+        ></ToastContainer>
       </div>
     </form>
   );

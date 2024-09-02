@@ -1,21 +1,50 @@
-
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [registationError, setRegistrationError] = useState("");
 
   //submit btn
   const handleRegister = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log("form submitted", email, password);
+    const accepted = e.target.terms.checked;
+    console.log("form submitted", email, password, accepted);
+
+    setRegistrationError("");
+
+    //pasword validation
+    if (password.length < 6) {
+      setRegistrationError(
+        toast.error("Password needs to be at least 6 characters!")
+      );
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegistrationError(
+        toast.error("Password needs to contain at least one uppercase letter!!")
+      );
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      setRegistrationError(
+        toast.error("Password needs to contain at least one lowercase letter!!")
+      );
+      return;
+    } else if (!accepted) {
+      setRegistrationError(
+        toast.error("Please accept our terms and conditions!!")
+      );
+      return;
+    }
 
     //create user
     createUser(email, password)
       .then((result) => {
+        toast.success("Account Successfully Created!!");
         console.log(result);
       })
       .catch((error) => {
@@ -52,6 +81,7 @@ const Register = () => {
               name="email"
               id="email"
               placeholder="Enter your email address"
+              required
             />
           </div>
           <div className="relative">
@@ -63,17 +93,21 @@ const Register = () => {
               name="password"
               id="password"
               placeholder="Enter your password"
+              required
             />
           </div>
         </div>
         <div className="flex gap-2 mx-20 my-2">
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="terms" id="terms" />
           <p>I Agree to All Terms & conditions</p>
         </div>
+        {/* {registationError} */}
         <div className="text-center p-3">
-          <button className="bg-[#FA4A4A] text-white border-none px-5 py-3 rounded-md w-3/4 mb-3">
-            Register
-          </button>
+          <input
+            type="submit"
+            value="Register"
+            className="bg-[#FA4A4A] btn text-white text-lg border-none px-5 py-3 rounded-md w-3/4 mb-3"
+          />
         </div>
         <p className="text-center mb-10">
           Already a member?{" "}
@@ -83,6 +117,19 @@ const Register = () => {
           now
         </p>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      ></ToastContainer>
     </form>
   );
 };
