@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
 
   //login btn
@@ -21,6 +21,28 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log("User logged in successfully");
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  //   google sign in
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  //github sign in
+  const handleGithubSignIn = () => {
+    githubSignIn()
+      .then((result) => {
         console.log(result);
       })
       .catch((error) => {
@@ -83,18 +105,26 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="text-center p-3">
-          <button className="bg-[#FA4A4A] text-white border-none px-5 py-3 rounded-md w-3/4 mb-5">
+        <div className="text-center mt-4 mx-3">
+          <button className="bg-[#FA4A4A] text-white border-none px-4 py-3 rounded-md w-3/4">
             Login
           </button>
+        </div>
+        <div className="text-center p-2 my-2">
           <div className="flex gap-3 justify-center">
-            <button className="flex items-center gap-4 bg-blue-400 text-white px-4 rounded-md w-3/5 ">
+            <button
+              onClick={handleGoogleSignIn}
+              className="flex items-center gap-4 bg-blue-400 text-white px-4 rounded-md w-3/5 "
+            >
               <span className=" bg-white p-3 my-2 rounded-md text-xl">
                 <FcGoogle></FcGoogle>
               </span>
               Sign in with Google
             </button>
-            <button className="bg-slate-300 p-4 px-5 rounded-md text-2xl ">
+            <button
+              onClick={handleGithubSignIn}
+              className="bg-slate-300 p-4 px-5 rounded-md text-2xl "
+            >
               <FaGithub></FaGithub>
             </button>
           </div>
