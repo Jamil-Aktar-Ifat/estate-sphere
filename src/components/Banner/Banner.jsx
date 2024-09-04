@@ -1,3 +1,5 @@
+import { IoIosStarOutline } from "react-icons/io";
+import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
   Pagination,
@@ -6,9 +8,6 @@ import {
   Autoplay,
 } from "swiper/modules";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,58 +16,72 @@ import "swiper/css/autoplay";
 
 const Banner = () => {
   return (
-    <div>
-      <Swiper
-        // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={3}
-        // navigation
-        pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
-        autoplay={{ delay: 2000 }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <div className="p-20 border">
-          <SwiperSlide className="my-10">
-            <img
-              src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide className="my-10">
-            <img
-              src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide className="my-10">
-            <img
-              src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide className="my-10">
-            <img
-              src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide className="my-10">
-            <img
-              src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide className="my-10">
-            <img
-              src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-              alt=""
-            />
-          </SwiperSlide>
+    <div className="flex items-center">
+      {/* text */}
+      <div className="w-1/3">
+        {/* stars  */}
+        <div className="flex gap-1 text-yellow-500 text-lg font-medium">
+          <IoIosStarOutline />
+          <IoIosStarOutline />
+          <IoIosStarOutline />
+          <IoIosStarOutline />
+          <IoIosStarOutline />
         </div>
-      </Swiper>
+        <div>
+          <p className="mt-3 text-lg font-medium">18,000+ TRUST CUSTOMERS</p>
+          <h2 className="mt-7 text-3xl font-semibold">
+            Discover Your{" "}
+            {/* <Typed
+              strings={["Paradise", "Desires", "Residence"]}
+              typeSpeed={100}
+              backSpeed={50}
+              // loop
+            /> */}
+            Home
+          </h2>
+          <p className="my-7">
+            Modern, responsive real estate template designed to showcase
+            properties elegantly and attract potential buyers effortlessly.
+          </p>
+          <div className="flex gap-4 text-white">
+            <button className="bg-[#FA4A4A] border-none px-5 py-3 rounded-md hover:bg-slate-700">
+              Exlpore
+            </button>
+            <button className="bg-[#FA4A4A] border-none px-5 py-3 rounded-md hover:bg-slate-700">
+              Demos
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* swiper  */}
+      <div className="w-2/3">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          // pagination={{ clickable: true }}
+          autoplay={{ delay: 4000 }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          <div className="p-20 border">
+            <SwiperSlide className="my-10">
+              <img
+                src="https://risingtheme.com/html/demo-newvilla/assets/img/other/hero-layer-img.png"
+                alt="Slide 1"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="my-10">
+              <img
+                src="https://risingtheme.com/html/demo-newvilla/assets/img/other/hero-layer-img2.png"
+                alt="Slide 2"
+              />
+            </SwiperSlide>
+            {/* Add more slides as needed */}
+          </div>
+        </Swiper>
+      </div>
     </div>
   );
 };

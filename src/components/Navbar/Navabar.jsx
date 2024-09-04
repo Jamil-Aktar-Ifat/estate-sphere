@@ -116,7 +116,9 @@ const Navabar = () => {
         </div>
         <button className="bg-[#FA4A4A] border-none px-5 py-3 rounded-md custom-hover flex items-center gap-4">
           <span className="text-white">Add Listing</span>
-          <CiCirclePlus className="text-xl text-white font-extrabold"></CiCirclePlus>
+          <div className="text-xl text-white font-extrabold">
+            <CiCirclePlus></CiCirclePlus>
+          </div>
         </button>
       </div>
     </div>
