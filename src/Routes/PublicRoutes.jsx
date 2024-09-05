@@ -7,6 +7,7 @@ import NotFound from "../Pages/NotFound/NotFound";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateRoutes from "./PrivateRoutes";
 import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
+import Properties from "../components/Properties/Properties";
 
 const routes = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const routes = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/properties",
+        element: <Properties></Properties>,
       },
       {
         path: "*",
@@ -44,7 +49,7 @@ const routes = createBrowserRouter([
             <PropertyDetails></PropertyDetails>
           </PrivateRoutes>
         ),
-        loader: () =>  fetch("/properties.json"),
+        loader: () => fetch("/properties.json"),
       },
     ],
   },

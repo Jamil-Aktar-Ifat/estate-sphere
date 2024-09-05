@@ -17,7 +17,7 @@ const Properties = () => {
       <h2 className="text-3xl font-semibold text-center my-10 animate__animated animate__bounceInRight animate__repeat-2	animate__slower">
         Trading Properties
       </h2>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-3 gap-5">
         {properties.slice(0, dataLength).map((property) => (
           <Property key={property.id} property={property}></Property>
         ))}
