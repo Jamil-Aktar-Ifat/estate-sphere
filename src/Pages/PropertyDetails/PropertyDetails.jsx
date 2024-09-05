@@ -2,10 +2,11 @@ import { useLoaderData, useParams } from "react-router-dom";
 import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 import { IoPricetagsOutline } from "react-icons/io5";
 import { GrStatusGood } from "react-icons/gr";
-import { LuAreaChart, LuCable } from "react-icons/lu";
+import { LuAreaChart } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineDescription } from "react-icons/md";
 import { LuPackagePlus } from "react-icons/lu";
+import Leaflet from "../../components/Leaflet/Leaflet";
 
 const PropertyDetails = () => {
   DynamicTitle("Property Details");
