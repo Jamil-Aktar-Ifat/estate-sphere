@@ -16,7 +16,7 @@ import "swiper/css/autoplay";
 
 const Banner = () => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center md:flex-row flex-col-reverse">
       {/* text */}
       <div className="w-1/3">
         {/* stars  */}
