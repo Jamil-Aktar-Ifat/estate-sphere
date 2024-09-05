@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Property = ({ property }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white relative">
@@ -41,9 +43,14 @@ const Property = ({ property }) => {
             ))}
           </ul>
         </div>
-        <button className="mt-4 w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">
-          View Property
-        </button>
+        <div className="mt-5 w-full ">
+          <Link
+            to="/propertyDetails"
+            className="btn w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
+          >
+            View Property
+          </Link>
+        </div>
       </div>
     </div>
   );
