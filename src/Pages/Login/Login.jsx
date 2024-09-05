@@ -135,7 +135,7 @@ const Login = () => {
             </button>
             <button
               onClick={handleGithubSignIn}
-              className="bg-slate-300 p-4 px-5 rounded-md text-2xl my-4 "
+              className="bg-slate-300 p-4 px-5 rounded-md text-2xl  "
             >
               <FaGithub></FaGithub>
             </button>
