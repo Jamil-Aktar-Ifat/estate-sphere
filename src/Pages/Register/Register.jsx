@@ -59,7 +59,7 @@ const Register = () => {
       <h2 className="text-4xl font-semibold text-center text-red-500 mt-20">
         Register <span className="text-black">Page</span>
       </h2>
-      <div className="border mx-72 mt-20">
+      <div className="border m-3 p-3 md:mx-72 mt-3 md:mt-20">
         <h2 className="text-xl font-semibold my-8 text-center">
           Register Here Today!!
         </h2>

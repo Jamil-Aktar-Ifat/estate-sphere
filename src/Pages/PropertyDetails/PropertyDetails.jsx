@@ -66,7 +66,7 @@ const PropertyDetails = () => {
               </li>
             ))}
           </ul>
-          <button className="bg-[#FA4A4A] text-white px-6 py-3 rounded-md custom-hover">
+          <button className="bg-[#FA4A4A] hover:bg-slate-600 text-white px-6 py-3 rounded-md custom-hover">
             Contact Us
           </button>
         </div>

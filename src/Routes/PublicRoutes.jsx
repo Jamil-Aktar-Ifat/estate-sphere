@@ -8,6 +8,7 @@ import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateRoutes from "./PrivateRoutes";
 import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 import Properties from "../components/Properties/Properties";
+import UnderConstruction from "../Pages/UnderConstruction/UnderConstruction";
 
 const routes = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const routes = createBrowserRouter([
       {
         path: "/properties",
         element: <Properties></Properties>,
+      },
+      {
+        path: "/underConstruction",
+        element: <UnderConstruction></UnderConstruction>,
       },
       {
         path: "*",

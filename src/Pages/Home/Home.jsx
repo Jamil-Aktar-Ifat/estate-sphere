@@ -8,7 +8,7 @@ const Home = () => {
   DynamicTitle("Home");
   return (
     <div className=" ">
-      <div>
+      <div className="mx-3">
         <Banner></Banner>
         <BestChoice></BestChoice>
         <Properties></Properties>

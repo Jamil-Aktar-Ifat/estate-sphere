@@ -18,7 +18,7 @@ const Banner = () => {
   return (
     <div className="flex items-center md:flex-row flex-col-reverse">
       {/* text */}
-      <div className="w-1/3">
+      <div className=" md:w-1/3 ml-4 ">
         {/* stars  */}
         <div className="flex gap-1 text-yellow-500 text-lg font-medium">
           <IoIosStarOutline />
@@ -54,7 +54,7 @@ const Banner = () => {
         </div>
       </div>
       {/* swiper  */}
-      <div className="w-2/3">
+      <div className="w-5/6 md:w-2/3">
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}

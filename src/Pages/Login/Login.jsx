@@ -67,7 +67,7 @@ const Login = () => {
       <h2 className="text-4xl font-semibold text-center text-red-500 mt-20">
         Login <span className="text-black">Page</span>
       </h2>
-      <div className="border mx-72 mt-20">
+      <div className="border m-3 p-3 md:mx-72 mt-4 md:mt-20">
         <h2 className="text-xl font-semibold my-8 text-center">
           Login Here Today!!
         </h2>
@@ -118,15 +118,15 @@ const Login = () => {
           </div>
         </div>
         <div className="text-center mt-4 mx-3">
-          <button className="bg-[#FA4A4A] text-white border-none px-4 py-3 rounded-md w-3/4">
+          <button className="bg-[#FA4A4A] text-white border-none px-4 py-3 rounded-md w-full md:w-3/4">
             Login
           </button>
         </div>
         <div className="text-center p-2 my-2">
-          <div className="flex gap-3 justify-center">
+          <div className="md:flex gap-3 justify-center">
             <button
               onClick={handleGoogleSignIn}
-              className="flex items-center gap-4 bg-blue-400 text-white px-4 rounded-md w-3/5 "
+              className="flex items-center gap-4 bg-blue-400 text-white px-4 rounded-md w-full md:w-3/5 "
             >
               <span className=" bg-white p-3 my-2 rounded-md text-xl">
                 <FcGoogle></FcGoogle>
@@ -135,7 +135,7 @@ const Login = () => {
             </button>
             <button
               onClick={handleGithubSignIn}
-              className="bg-slate-300 p-4 px-5 rounded-md text-2xl "
+              className="bg-slate-300 p-4 px-5 rounded-md text-2xl my-4 "
             >
               <FaGithub></FaGithub>
             </button>

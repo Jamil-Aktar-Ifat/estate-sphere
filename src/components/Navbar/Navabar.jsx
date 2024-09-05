@@ -28,13 +28,13 @@ const Navabar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to='/properties'>Properties</NavLink>
+        <NavLink to="/properties">Properties</NavLink>
       </li>
       <li>
-        <NavLink>Realtor</NavLink>
+        <NavLink to="/underConstruction">Realtor</NavLink>
       </li>
       <li>
-        <NavLink>Blogs</NavLink>
+        <NavLink to="/underConstruction">Blogs</NavLink>
       </li>
       {user ? (
         <li>
