@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "estate_title": "Luxury Villa in Beverly Hills",
+    "property_title": "Luxury Villa in Beverly Hills",
     "segment_name": "Residential",
     "description": "A stunning luxury villa with modern amenities and breathtaking views of Beverly Hills.",
     "price": "$5,500,000",
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "estate_title": "Downtown Apartment",
+    "property_title": "Downtown Apartment",
     "segment_name": "Residential",
     "description": "A modern apartment located in the heart of the city, ideal for urban professionals.",
     "price": "$1,200,000",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "estate_title": "Beachfront Condo",
+    "property_title": "Beachfront Condo",
     "segment_name": "Residential",
     "description": "Experience breathtaking ocean views and exclusive beach access with this luxurious, modern beachfront condo.",
     "price": "$2,800,000",
@@ -42,7 +42,7 @@
   },
   {
     "id": 4,
-    "estate_title": "Suburban Family Home",
+    "property_title": "Suburban Family Home",
     "segment_name": "Residential",
     "description": "This spacious family home features a large backyard and is located in a top-rated school district.",
     "price": "$750,000",
@@ -54,7 +54,7 @@
   },
   {
     "id": 5,
-    "estate_title": "Penthouse in the Sky",
+    "property_title": "Penthouse in the Sky",
     "segment_name": "Residential",
     "description": "A luxurious penthouse offering panoramic city views and top-of-the-line amenities.",
     "price": "$4,500,000",
@@ -71,7 +71,7 @@
   },
   {
     "id": 6,
-    "estate_title": "Mountain Retreat Cabin",
+    "property_title": "Mountain Retreat Cabin",
     "segment_name": "Residential",
     "description": "A cozy cabin retreat nestled in the mountains, perfect for weekend getaways.",
     "price": "$850,000",
@@ -83,7 +83,7 @@
   },
   {
     "id": 7,
-    "estate_title": "City Loft Studio",
+    "property_title": "City Loft Studio",
     "segment_name": "Residential",
     "description": "An open-plan studio loft located in the heart of the downtown district, perfect for singles or young professionals.",
     "price": "$650,000",
@@ -95,12 +95,13 @@
       "Kitchen",
       "Rooftop terrace",
       "Fitness center"
+    
     ],
     "image": "https://images.pexels.com/photos/279648/pexels-photo-279648.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     "id": 8,
-    "estate_title": "Country Farmhouse",
+    "property_title": "Country Farmhouse",
     "segment_name": "Residential",
     "description": "A classic farmhouse with large acreage, ideal for rural living and a peaceful lifestyle.",
     "price": "$1,100,000",
@@ -112,7 +113,7 @@
   },
   {
     "id": 9,
-    "estate_title": "Modern Suburban House",
+    "property_title": "Modern Suburban House",
     "segment_name": "Residential",
     "description": "A modern house with smart home features and energy-efficient design in a quiet neighborhood.",
     "price": "$950,000",

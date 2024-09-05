@@ -21,7 +21,7 @@ const Property = ({ property }) => {
         </span>
       </div>
       <div className="p-6">
-        <div className="font-bold text-xl mb-2">{property.estate_title}</div>
+        <div className="font-bold text-xl mb-2">{property.property_title}</div>
         <p className="text-gray-700 text-base">{property.description}</p>
         <div className="mt-4">
           <span className="block font-semibold text-gray-900">
@@ -45,7 +45,7 @@ const Property = ({ property }) => {
         </div>
         <div className="mt-5 w-full ">
           <Link
-            to="/propertyDetails"
+            to={`/property/${property.id}`}
             className="btn w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
           >
             View Property

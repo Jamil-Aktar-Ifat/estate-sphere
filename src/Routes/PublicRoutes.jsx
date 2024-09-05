@@ -38,12 +38,13 @@ const routes = createBrowserRouter([
         ),
       },
       {
-        path: "/propertyDetails",
+        path: "/property/:id",
         element: (
           <PrivateRoutes>
             <PropertyDetails></PropertyDetails>
           </PrivateRoutes>
         ),
+        loader: () =>  fetch("/properties.json"),
       },
     ],
   },
