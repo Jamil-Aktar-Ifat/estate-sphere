@@ -9,12 +9,13 @@ import { LuPackagePlus } from "react-icons/lu";
 import Leaflet from "../../components/Leaflet/Leaflet";
 
 const PropertyDetails = () => {
-  DynamicTitle("Property Details");
+  //   DynamicTitle(`${property.property_title}`);
 
   const properties = useLoaderData();
   const { id } = useParams();
   const property = properties.find((property) => property.id === parseInt(id));
   console.log(property);
+  DynamicTitle(property.property_title);
   return (
     <div className="container mx-auto p-6">
       <div className="flex flex-col md:flex-row gap-10">

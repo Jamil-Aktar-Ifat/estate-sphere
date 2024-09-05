@@ -11,6 +11,7 @@ import {
   GithubAuthProvider,
   onAuthStateChanged,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 
 export const AuthContext = createContext(null);
@@ -51,6 +52,12 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, githubProvider);
   };
 
+  //update profile
+  const profileUpdate = (displayName, photoURL) => {
+    // setLoading(true);
+    return updateProfile(auth.currentUser, { displayName, photoURL });
+  };
+
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("user in the auth state changed", currentUser);
@@ -70,6 +77,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     googleSignIn,
     githubSignIn,
+    profileUpdate,
   };
 
   return (

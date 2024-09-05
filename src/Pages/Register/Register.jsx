@@ -76,6 +76,17 @@ const Register = () => {
             />
           </div>
           <div className="">
+            <h2 className="font-medium mb-1">Your Photo Url</h2>
+            <input
+              className="border p-4 w-full mb-5 rounded-md "
+              type="url"
+              name="url"
+              id="url"
+              placeholder="Insert your url"
+            />
+            
+          </div>
+          <div className="">
             <h2 className="font-medium mb-1">Your Email</h2>
             <input
               className="border p-4 w-full mb-5 rounded-md"
