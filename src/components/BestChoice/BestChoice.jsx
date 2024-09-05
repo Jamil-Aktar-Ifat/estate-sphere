@@ -5,6 +5,7 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import { GiTalk } from "react-icons/gi";
 import { LiaHandshake } from "react-icons/lia";
 import { TbTruckDelivery } from "react-icons/tb";
+import "animate.css";
 
 import "./Card.css";
 
@@ -24,7 +25,7 @@ const BestChoice = () => {
   return (
     <div className="my-10">
       <div>
-        <h2 className="text-3xl font-semibold text-center mb-10">
+        <h2 className="text-3xl font-semibold text-center mb-10 animate__animated animate__bounceInLeft 	animate__slower">
           Why Choose Us?
         </h2>
       </div>

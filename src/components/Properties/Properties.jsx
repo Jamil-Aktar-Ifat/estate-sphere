@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Property from "../Property/Property";
+import "animate.css";
 
 const Properties = () => {
   const [properties, setProperties] = useState([]);
@@ -13,7 +14,7 @@ const Properties = () => {
 
   return (
     <div className="my-20">
-      <h2 className="text-3xl font-semibold text-center my-10">
+      <h2 className="text-3xl font-semibold text-center my-10 animate__animated animate__bounceInRight animate__repeat-2	animate__slower">
         Trading Properties
       </h2>
       <div className="grid grid-cols-3 gap-5">

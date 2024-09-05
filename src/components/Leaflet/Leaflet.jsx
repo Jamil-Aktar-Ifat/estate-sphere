@@ -1,12 +1,13 @@
-import React from "react";
+import "animate.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // Import Leaflet CSS
-import { div } from "framer-motion/client";
 
 const Leaflet = () => {
   return (
     <div className="my-10">
-      <h2 className="text-3xl font-semibold text-center my-10">Find us here</h2>
+      <h2 className="text-3xl font-semibold text-center my-10 animate__animated animate__flip animate__repeat-2	animate__slower ">
+        Find us here
+      </h2>
       <MapContainer
         style={{ height: "400px", width: "100%" }}
         center={[51.505, -0.09]}
