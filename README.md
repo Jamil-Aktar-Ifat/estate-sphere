@@ -109,8 +109,9 @@ This project is open-source and available under the MIT License.
 Contact
 For any inquiries or issues, feel free to contact me via:
 
-Email: your-email@example.com
-GitHub: your-github-username
+Email: mifat01@student.bbk.ac.uk
+Live Website Link: https://estate-sphere-9f803.web.app
+GitHub: jamil-aktar-ifat
 Feel free to reach out if you encounter any bugs or want to suggest features!
 
 Acknowledgements
