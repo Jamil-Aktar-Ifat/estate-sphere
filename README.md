@@ -3,23 +3,25 @@
 
 This is a User Profile Management web application built with React, Firebase Authentication, and Tailwind CSS. It allows users to sign up, log in, view their profile, and update their personal information such as name and profile picture.
 
-Table of Contents
-Project Overview
-Features
-Tech Stack
-Installation
-Usage
-Firebase Setup
-Available Scripts
-Contributing
-License
-Project Overview
+1. Table of Contents
+2. Project Overview
+3. Features
+4. Tech Stack
+5. Installation
+6. Usage
+7. Firebase Setup
+8. Available Scripts
+9. Contributing
+10. License
+
+
+<h2>Project Overview</h2>
 This app provides a simple interface for users to manage their profiles. Users can register with their email, log in, and view their profile information including name, email, and profile picture. They can also update their profile details and the changes will be reflected in Firebase Authentication.
 
-Live Demo
-You can check out the live version of the app here: Your Live App URL
+<h2>Live Demo</h2>
+You can check out the live version of the app here: https://estate-sphere-9f803.web.app
 
-Features
+<h2>Features</h2>
 User authentication with Firebase (Email, Google, GitHub).
 View profile details such as name, email, and profile picture.
 Update profile information (name, photo URL).
@@ -30,7 +32,9 @@ Backend: Firebase Authentication
 State Management: Context API
 Routing: React Router
 Deployment: Firebase Hosting (optional)
-Installation
+
+
+<h2>Installation</h2>
 To get a local copy of the project up and running, follow these steps:
 
 1. Clone the repository:
@@ -55,7 +59,7 @@ Copy code
 npm start
 This will open the app in your browser at http://localhost:3000.
 
-Usage
+<h2>Usage</h2>
 Sign Up: New users can create an account using their email and password.
 Login: Users can log in using their email, Google, or GitHub credentials.
 Profile Management: Users can view their profile details and update their name or profile picture URL.
@@ -95,25 +99,24 @@ Launches the test runner.
 npm run lint
 Lints the project using ESLint to maintain code quality.
 
-Contributing
+<h2>Contributing</h2>
 Contributions, issues, and feature requests are welcome! If you want to contribute:
 
-Fork the project.
+<h2>Fork the project</h2>
 Create a new branch (git checkout -b feature-branch).
 Commit your changes (git commit -m 'Add new feature').
 Push the branch (git push origin feature-branch).
 Open a Pull Request.
-License
+
+<h2>License</h2>
 This project is open-source and available under the MIT License.
 
-Contact
+<h2>Contact</h2>
 For any inquiries or issues, feel free to contact me via:
-
 Email: mifat01@student.bbk.ac.uk
-Live Website Link: https://estate-sphere-9f803.web.app
 GitHub: jamil-aktar-ifat
 Feel free to reach out if you encounter any bugs or want to suggest features!
 
-Acknowledgements
+<h2>Acknowledgements</h2>
 Firebase for authentication.
 React and Tailwind CSS for making development efficient and enjoyable.
